@@ -17,9 +17,10 @@ namespace AdvancedWebAPIpractice.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult> GetAllProducts()
+        public async Task<ActionResult> GetAllProducts([FromQuery]QuerryPrameters parms)
         {
-            return Ok(await _productService.GetAllProducts());
+
+            return Ok(await _productService.GetAllProducts(parms));
         }
 
         [HttpGet("{id}")]

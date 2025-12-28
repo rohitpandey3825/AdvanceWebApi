@@ -2,6 +2,7 @@
 using ProductCommon.Interface;
 using ProductCommon.Models;
 using ProductsDataAccess;
+using System.Linq;
 
 namespace ProductsService
 {
@@ -16,15 +17,18 @@ namespace ProductsService
             _context.Database.EnsureCreated();
         }
 
-        public async Task<IEnumerable<Product>> GetAllProducts()
+        public async Task<IEnumerable<Product>> GetAllProducts(QuerryPrameters qparams)
         {
-            return await _context.Products.ToArrayAsync();
+            return await _context.Products
+                .Skip((qparams.PageNumber - 1) * qparams.PageSize)
+                .Take(qparams.PageSize)
+                .ToArrayAsync();
         }
 
         public async Task<Product?> GetProduct(int id)
         {
             return await _context.Products.FindAsync(id);
-            
+
         }
 
         public async Task<IEnumerable<Product>> GetAvailableProducts()

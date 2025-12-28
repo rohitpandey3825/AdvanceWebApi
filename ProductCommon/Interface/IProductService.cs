@@ -4,7 +4,7 @@ namespace ProductCommon.Interface
 {
     public interface IProductService
     {
-        public Task<IEnumerable<Product>> GetAllProducts();
+        public Task<IEnumerable<Product>> GetAllProducts(QuerryPrameters parms);
 
         public Task<Product?> GetProduct(int id);
 
