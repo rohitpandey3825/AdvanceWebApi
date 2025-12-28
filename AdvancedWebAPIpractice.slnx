@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="AdvancedWebAPIpractice/AdvancedWebAPIpractice.csproj" />
+  <Project Path="ProductCommon/ProductCommon.csproj" />
+  <Project Path="ProductsDataAccess/ProductsDataAccess.csproj" />
+  <Project Path="ProductsService/ProductsService.csproj" />
+</Solution>

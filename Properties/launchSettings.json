@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "AdvancedWebAPIpractice": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger/index.html",
+      "applicationUrl": "https://localhost:44379;http://localhost:5234",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
